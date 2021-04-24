@@ -5,6 +5,9 @@ const reproductor = {
   borrar: () => console.log('borrando cancion'),
   crearPlayList: (name) => console.log('Creando la playlist', name),
   reproducirPlaylist: (name) => console.log('reproduciendo playlist', name),
+  /**
+   * @param {string} cancion
+   */
   set nuevaCancion(cancion) {
     this.cancion = cancion;
     console.log('añadiendo', cancion);
