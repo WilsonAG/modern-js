@@ -1,0 +1,19 @@
+{
+  "name": "51-testing-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Wilson Aguilar",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-jest": "^27.0.2"
+  }
+}
