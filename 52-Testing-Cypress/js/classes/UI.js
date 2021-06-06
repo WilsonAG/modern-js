@@ -8,16 +8,23 @@ class UI {
     }
 
     imprimirAlerta(mensaje, tipo) {
+        const prevAlert = document.querySelector('.alert')
+        if (prevAlert) {
+            prevAlert.remove()
+        }
         // Crea el div
         const divMensaje = document.createElement('div');
         divMensaje.classList.add('text-center', 'alert', 'd-block', 'col-12');
-        
+
         // Si es de tipo error agrega una clase
         if(tipo === 'error') {
             divMensaje.classList.add('alert-danger');
         } else {
             divMensaje.classList.add('alert-success');
         }
+
+        // data cy
+        divMensaje.dataset.cy = "alerta"
 
         // Mensaje de error
         divMensaje.textContent = mensaje;
@@ -68,6 +75,7 @@ class UI {
 
             // Agregar un botón de eliminar...
             const btnEliminar = document.createElement('button');
+            btnEliminar.dataset.cy = 'btn-eliminar'
             btnEliminar.onclick = () => eliminarCita(id); // añade la opción de eliminar
 
             btnEliminar.classList.add('btn', 'btn-danger', 'mr-2');
@@ -75,6 +83,7 @@ class UI {
 
             // Añade un botón de editar...
             const btnEditar = document.createElement('button');
+            btnEditar.dataset.cy = 'btn-editar'
             btnEditar.onclick = () => cargarEdicion(cita);
 
 
@@ -97,7 +106,7 @@ class UI {
 
    textoHeading(citas) {
         if(citas.length > 0 ) {
-            heading.textContent = 'Administra tus Citas '
+            heading.textContent = 'Administra tus Citas'
         } else {
             heading.textContent = 'No hay Citas, comienza creando una'
         }

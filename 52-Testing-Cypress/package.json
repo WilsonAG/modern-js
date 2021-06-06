@@ -1,0 +1,16 @@
+{
+  "name": "52-testing-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypo": "cypress open",
+    "cypr": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.4.0"
+  }
+}
